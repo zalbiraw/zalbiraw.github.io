@@ -1,0 +1,15 @@
+.menu-bar.expanded {
+	max-height: 600px;
+	transition: max-height 0.2s ease-in;
+	cursor: pointer;
+}
+
+@media (min-width: 0px) {
+	.menu-bar.expanded .arrow {
+		-moz-transform:rotate(90deg);
+	    -webkit-transform:rotate(90deg);
+	    -o-transform:rotate(90deg);
+	    transform:rotate(90deg)
+		transition: all 0.2s linear;
+	}
+}
