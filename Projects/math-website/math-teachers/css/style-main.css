@@ -1,0 +1,157 @@
+/* HOMEPAGE ITEMS */
+/* MURAL ITEMS */
+.bg {
+    -webkit-background-size:100% auto!important;
+    -moz-background-size:100% auto!important;
+    -o-background-size:100% auto!important;
+    background-size:100% auto!important;
+    background-attachment:scroll
+}
+
+#mural {
+    -khtml-user-select:none;
+    -o-user-select:none;
+    -moz-user-select:none;
+    -webkit-user-select:none;
+    user-select:none
+}
+
+#mural div {
+    position:absolute;
+    width:100%;
+    height:inherit
+}
+
+div.background {
+    position:relative;
+    z-index:7;
+    bottom:0
+}
+
+.background img {
+    max-height:800px;
+    position:absolute
+}
+
+.char img {
+    position:absolute
+}
+
+
+/* NAVMENU ON HOMEPAGE */
+
+#slogan {
+    background:#d0d0c9;
+    color:#898980;
+    letter-spacing:2px
+}
+
+.fixed {
+    position:fixed;
+    top:0;
+    z-index:100
+}
+
+#slogan h3 {
+    margin:20px auto
+}
+
+#intro {
+    background:#e8e8e0;
+    padding-top:15px;
+    color:#555
+}
+
+#intro .lead {
+    margin-bottom:8px
+}
+
+.chapter-num {
+    font-family:"Permanent Marker","Trebuchet MS",Helvetica,sans-serif;
+    font-size:40px;
+    color:rgba(0,0,0,0.3);
+    letter-spacing:3px
+}
+
+.container {
+    position:relative
+}
+
+section {
+    padding-left:15px;
+    padding-right:15px;
+    border-bottom:8px solid #e8e8e0;
+    padding-bottom:15px
+}
+
+.chapter-name {
+    color:#fff;
+    font-size:12px;
+    margin-top:-10px;
+    text-transform:uppercase;
+    color:rgba(255,255,255,0.8)
+}
+
+.chapter-sum {
+    color:rgba(255,255,255,0.7);
+    margin-left:-15px;
+    margin-bottom:20px
+}
+
+.chapter-icon {
+    margin-top:25px;
+    text-align:right
+}
+
+.chapter-icon div {
+    float:right
+}
+
+.chapter-btn {
+    position:absolute;
+    text-align:right;
+    bottom:0
+}
+
+section .btn {
+    background:rgba(0,0,0,0.3);
+    color:#fff;
+    min-width:200px;
+    border:none;
+    margin-bottom:15px;
+    position:absolute;
+    bottom:0;
+    right:0
+}
+
+/* TEMPLATE STYLING */
+#slogan.fixed {
+    width:100%
+}
+
+/************************************************************************/
+/**************************      MEDIA QUERIES     **********************/
+/************************************************************************/
+/* Extra small devices (phones, less than 768px) */
+@media (max-width: 768px) {
+	.chapter-icon {
+	    text-align:left;
+	    margin-bottom:15px
+	}
+	
+	.chapter-icon div {
+	    float:left
+	}
+	
+	.chapter-num h1 {
+	    font-size:30px
+	}
+	
+	.chapter-name h3 {
+	    font-size:20px
+	}
+	
+	section .btn {
+	    min-width:140px
+	}
+}
