@@ -1,0 +1,53 @@
+.item-title {
+	width: 450px;
+}
+
+.item-status, .item-submissions {
+	width: 130px;
+}
+
+#questions-list .item-title {
+	width: 250px;
+}
+
+.item-type, .item-value {
+	width: 180px;
+}
+
+#questions-list .item-submissions {
+	width: 160px;
+}
+
+.item-graded {
+	width: 60px;
+	text-align: right;
+	padding-right: 10px; 
+}
+
+.item-status, .item-release, .item-slist, .item-qlist, .item-type, 
+.item-value, .item-submissions, .item-graded, .item-grade-status {
+	color: #808080;
+}
+
+.item-release, .item-slist, .item-qlist {
+	width: 50px;
+	text-align: right;
+	cursor: pointer;
+}
+
+.item-slist:active, .item-qlist:active, .item-graded:active, 
+.item-submissions:active, .item-grade-status:active {
+	color: #4D4D4D;
+}
+
+#graded.item-release, #partial.item-grade-status {
+	color: #3FA9F5;
+}
+
+#released .item-release, .item-release:active, #graded.item-release:active, #complete.item-grade-status {
+	color: #4CAE4C;
+}
+
+.item-submissions, .item-graded, .item-grade-status {
+	cursor: pointer;
+}

@@ -1,0 +1,163 @@
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="css/dashboard.css">
+		<link rel="stylesheet" type="text/css" href="css/dashboard-evaluator.css">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+		
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+		<script src="js/dashboard.js"></script>
+		<script src="js/dashboard-evaluator.js"></script>
+	</head>
+	<body>
+		<div class="menubar">
+			<div class="container">
+				<span class="page-title">SOFL2A<span class="page-title-user"> - Evaluator</span></span>
+				<img class="profile" src="artwork/pic-fill.jpg"></img>
+			</div>
+		</div>
+		<div id="sliding-container">
+			<div id="on-screen">
+				<section id="test-room" class="container">
+					<div class="section-header">
+						Test Rooms	
+					</div>
+					<ul class="section-content">
+						<li class="item">
+							<ul class="item-header">
+								<li class="item-title">Test Room #32564835547</li>
+								<li class="item-status">Active</li>
+								<li class="item-submissions" title="Submissions">60/100</li>
+								<li class="item-slist" title="Submission List"><i></i></li>
+								<li class="item-qlist" title="Question List"><i></i></li>
+								<li class="item-release" title="Release Grade"><i></i></li>
+							</ul>
+						</li>
+						<li class="item">
+							<ul class="item-header">
+								<li class="item-title">Test Room #34212354671</li>
+								<li class="item-status">Inactive</li>
+								<li class="item-submissions" title="Submissions">0/60</li>
+								<li class="item-slist" title="Submission List"><i></i></li>
+								<li class="item-qlist" title="Question List"><i></i></li>
+								<li class="item-release" title="Release Grade"><i></i></li>
+							</ul>
+						</li>
+						<li class="item">
+							<ul class="item-header">
+								<li class="item-title">Test Room #32047583950</li>
+								<li class="item-status">Inactive</li>
+								<li class="item-submissions" title="Submissions">0/300</li>
+								<li class="item-slist" title="Submission List"><i></i></li>
+								<li class="item-qlist" title="Question List"><i></i></li>
+								<li class="item-release" title="Release Grade"><i></i></li>
+							</ul>
+						</li>
+						<li class="item">
+							<ul class="item-header">
+								<li class="item-title">Test Room #23556479584</li>
+								<li class="item-status">Inactive</li>
+								<li class="item-submissions" title="Submissions">0/0</li>
+								<li class="item-slist" title="Submission List"><i></i></li>
+								<li class="item-qlist" title="Question List"><i></i></li>
+								<li class="item-release" title="Release Grade"><i></i></li>
+							</ul>
+						</li>
+					</ul>
+
+					<div class="section-header">
+						Test Rooms - Closed
+					</div>
+					<ul class="section-content">
+						<li class="item">
+							<ul class="item-header">
+								<li class="item-title">Test Room #52634623553</li>
+								<li class="item-status">Grading</li>
+								<li class="item-submissions" title="Submissions">99/100</li>
+								<li class="item-slist" title="Submission List"><i></i></li>
+								<li class="item-qlist" title="Question List"><i></i></li>
+								<li class="item-release" title="Release Grade"><i></i></li>
+							</ul>
+						</li>
+						<li class="item">
+							<ul class="item-header">
+								<li class="item-title">Test Room #86756435323</li>
+								<li class="item-status">Graded</li>
+								<li class="item-submissions" title="Submissions">89/120</li>
+								<li class="item-slist" title="Submission List"><i></i></li>
+								<li class="item-qlist" title="Question List"><i></i></li>
+								<li id="graded" class="item-release" title="Release Grade"><i></i></li>
+							</ul>
+						</li>
+					</ul>
+
+					<div class="section-header">
+						Test Rooms - Released
+					</div>
+					<ul id="released" class="section-content">
+						<li class="item">
+							<ul class="item-header">
+								<li class="item-title">Test Room #52634623553</li>
+								<li class="item-status">Released</li>
+								<li class="item-submissions" title="Submissions">20/20</li>
+								<li class="item-slist" title="Submission List"><i></i></li>
+								<li class="item-qlist" title="Question List"><i></i></li>
+								<li class="item-release" title="Release Grade"><i></i></li>
+							</ul>
+						</li>
+						<li class="item">
+							<ul class="item-header">
+								<li class="item-title">Test Room #86756435323</li>
+								<li class="item-status">Released</li>
+								<li class="item-submissions" title="Submissions">267/300</li>
+								<li class="item-slist" title="Submission List"><i></i></li>
+								<li class="item-qlist" title="Question List"><i></i></li>
+								<li class="item-release" title="Release Grade"><i></i></li>
+							</ul>
+						</li>
+					</ul>
+				</section>
+			</div>
+			<div id="off-screen">
+				<section id="questions-list" class="container">
+					<div class="section-header">
+						<span class="slide-back">Test Rooms</span> 
+						<i class="fa fa-chevron-right"></i>
+						<span id="breadcrumb"></span>
+					</div>
+					<ul class="section-content">
+						<li class="item">
+							<ul class="item-header">
+								<li class="item-title">Question 1</li>
+								<li class="item-submissions" title="Submissions">89/100</li>
+								<li class="item-type">Oral</li>
+								<li class="item-value">2 points</li>
+								<li class="item-graded" title="Graded">0/89</li>
+								<li id="none" class="item-grade-status"><i></i></li>
+							</ul>
+						</li>
+						<li class="item">
+							<ul class="item-header">
+								<li class="item-title">Question 2</li>
+								<li class="item-submissions" title="Submissions">89/100</li>
+								<li class="item-type">True/False</li>
+								<li class="item-value">1 point</li>
+								<li class="item-graded" title="Graded">89/89</li>
+								<li id="complete" class="item-grade-status"><i></i></li>
+							</ul>
+						</li>
+						<li class="item">
+							<ul class="item-header">
+								<li class="item-title">Question 3</li>
+								<li class="item-submissions" title="Submissions">89/100</li>
+								<li class="item-type">Short Answer</li>
+								<li class="item-value">5 point</li>
+								<li class="item-graded" title="Graded">70/89</li>
+								<li id="partial" class="item-grade-status"><i></i></li>
+							</ul>
+						</li>
+					</ul>
+				</section>
+			</div>
+		</div>
+	</body>
+</html>

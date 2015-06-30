@@ -1,0 +1,167 @@
+.item-title {
+	width: 400px;
+}
+
+.item-status {
+	width: 200px;
+}
+
+.active .item-status:before {
+	content: "In progress";
+}
+
+.pending .item-status:before {
+	content:"Pending";
+}
+
+.pass .item-status:before {
+	content:"Pass";
+}
+
+.fail .item-status:before {
+	content:"Fail";
+}
+
+.inactive .item-status, .pending .item-status, .item-link {
+	color: #808080;
+}
+
+.active .item-status, .pass .item-status {
+	color: #4CAE4C;
+}
+
+.fail .item-status {
+	color: #D43F3A;
+}
+
+.item-link {
+	width: 260px;
+	text-align: right;
+}
+
+.active .item-link:before {
+	content:"Enter Test Room";
+}
+
+.inactive .item-link:before {
+	content:"Test Information";
+}
+
+.pending .item-link:before {
+	content:"Grading";
+}
+
+.pass .item-link:before {
+	content:"Reveal Grade";
+}
+
+.fail .item-link:before {
+	content:"Reveal Grade";
+}
+
+.inactive:hover .item-link, .inactive.expanded .item-link {
+	color: #3FA9F5;
+}
+
+.active:hover .item-link, .pass:hover .item-link {
+	color: #4CAE4C;
+}
+
+.fail:hover .item-link {
+	color: #D43F3A;
+}
+
+ .item-link .fa-unlock-alt {
+	display: none;
+}
+
+.item:active .item-link .fa-unlock-alt {
+	display: inline;
+}
+
+.item:active .item-link .fa-lock {
+	display: none;
+}
+
+.item-link i {
+	margin-left: 10px;
+}
+
+.status-indicator {
+	display: block;
+	height: 50px;
+	width: 5px;
+	
+	position: absolute;
+	margin-top: -10px;
+	margin-left: -20px;
+}
+
+.pending .status-indicator {
+	background-color: #808080;
+}
+
+.pass .status-indicator {
+	background-color: #4CAE4C;
+}
+
+.fail .status-indicator {
+	background-color: #D43F3A;
+}
+
+.active:hover, .inactive:hover, .pass:hover, .fail:hover {
+	cursor: pointer;
+}
+
+.pending:hover {
+	cursor: default;
+}
+
+.expandable-box {
+	overflow: hidden;
+	background-color: #FFFFFF;
+	border-top: 2px solid #3FA9F5;
+	width: 860px;
+	padding: 0 20px;
+	margin: 10px 0 0 -20px;
+}
+
+.collapsed .expandable-box {
+	height: 0;
+	display: none;
+}
+
+.inactive.expanded {
+	padding-bottom: 0;
+}
+
+.expanded .expandable-box {
+	height: auto;
+	display: inline-block;
+}
+
+.info-title, .info-provided {
+	display: inline-block;
+	padding: 10px 0;
+	
+	font-family: 'Roboto', sans-serif;
+	font-size: 16px;
+	font-weight: 300;
+}
+
+.info-title {
+	color: #808080;
+	width: 115px;
+	text-align: right;
+}
+
+.info-provided {
+	color: #4D4D4D;
+	width: 245px;
+	padding-left: 20px;
+	font-weight: 400;
+}
+
+.fail:active .item-link:before, .pass:active .item-link:before {
+	content: "myMark";
+}

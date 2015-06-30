@@ -1,0 +1,30 @@
+.item-title {
+	width: 460px;
+}
+
+.item-status {
+	width: 150px;
+}
+
+#manage-users .item-title, .item-email {
+	width: 230px;
+}
+
+#manage-users .item-status {
+	width: 300px;
+}
+
+.item-status, .item-add-students, .item-remove-students, .item-settings, .item-close, .item-remove, .item-email {
+	color: #808080;
+
+}
+.item-add-students, .item-remove-students, .item-settings, .item-close, .item-remove {
+	width: 50px;
+	text-align: right;
+	cursor: pointer;
+}
+
+ .item-add-students:active,  .item-remove-students:active, .item-settings:active, 
+.item-close:active, .item-remove:active {
+	color: #4D4D4D;
+}

@@ -1,0 +1,124 @@
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="css/dashboard.css">
+		<link rel="stylesheet" type="text/css" href="css/dashboard-student.css">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+		
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+		<script src="js/dashboard.js"></script>
+		<script src="js/dashboard-student.js"></script>
+	</head>
+	<body>
+		<div class="menubar">
+			<div class="container">
+				<span class="page-title">SOFL2A<span class="page-title-user"> - Students</span></span>
+				<img class="profile" src="artwork/pic-fill.jpg"></img>
+			</div>
+		</div>
+		<div id="sliding-container">
+			<div id="on-screen">
+				<section class="container">
+					<div class="section-header">
+						Tests - Upcoming
+					</div>
+					<ul class="section-content">
+						<li class="item active">
+						<ul class="item-header">
+							<li class="item-title">Test #123456789</li>
+							<li class="item-status"></li>
+							<li class="item-link"><i></i></li>
+						</ul>
+					</li>
+					<li class="item inactive collapsed">
+						<ul class="item-header">
+							<li class="item-title">Test #096758476</li>
+							<li class="item-status">July 15, 2015</li>
+							<li class="item-link"><i></i></li>
+						</ul>
+						<div class="expandable-box">
+							<span class="info-title">Test Room:</span>
+							<span class="info-provided">Room 325</span>
+
+							<span class="info-title">Starting Time:</span>
+							<span class="info-provided">12:00:00 P.M.</span>
+						
+							<span class="info-title">Test Duration:</span>
+							<span class="info-provided">2.5 hours</span>
+
+							<span class="info-title">Ending Time:</span>
+							<span class="info-provided">02:30:00 P.M.</span>
+						
+							<span class="info-title">Grade Scale:</span>
+							<span class="info-provided">100</span>
+						
+							<span class="info-title">Status:</span>
+							<span class="info-provided">Inactive</span>
+						</div>
+					</li>
+					<li class="item inactive collapsed" href="#">
+						<ul class="item-header">
+							<li class="item-title">Test #623623541</li>
+							<li class="item-status">August 7, 2015</li>
+							<li class="item-link"><i></i></li>
+						</ul>
+						<div class="expandable-box">
+							<span class="info-title">Test Room:</span>
+							<span class="info-provided">Room 325</span>
+
+							<span class="info-title">Starting Time:</span>
+							<span class="info-provided">12:00:00 P.M.</span>
+						
+							<span class="info-title">Test Duration:</span>
+							<span class="info-provided">2.5 hours</span>
+
+							<span class="info-title">Ending Time:</span>
+							<span class="info-provided">02:30:00 P.M.</span>
+						
+							<span class="info-title">Grade Scale:</span>
+							<span class="info-provided">100</span>
+						
+							<span class="info-title">Status:</span>
+							<span class="info-provided">Inactive</span>
+						</div>
+					</li>
+					</ul>
+					<div class="section-header">
+						Tests - Past Due
+					</div>
+					<ul class="section-content">
+						<li class="item pending">
+							<ul class="item-header">
+								<div class="status-indicator"></div>
+								<li class="item-title">Test #124123411</li>
+								<li class="item-status"></li>
+								<li class="item-link"><i></i></li>
+							</ul>
+						</li>
+						<li class="item fail">
+							<ul class="item-header">
+								<div class="status-indicator"></div>
+								<li class="item-title">Test #865742621</li>
+								<li class="item-status"></li>
+								<li class="item-link">
+									<i id="lock"></i>
+									<i id="unlock"></i>
+								</li>
+							</ul>
+						</li>
+						<li class="item pass">
+							<ul class="item-header">
+								<div class="status-indicator"></div>
+								<li class="item-title">Test #657467346</li>
+								<li class="item-status"></li>
+								<li class="item-link">
+									<i id="lock"></i>
+									<i id="unlock"></i>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</section>
+			</div>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,29 @@
+.item-title {
+	width: 760px;
+}
+
+#questions-array .item-title {
+	width: 350px;
+}
+
+.item-type, .item-value {
+	width: 180px;
+}
+
+.item-type, .item-value, .item-edit, .item-remove, .item-preview {
+	color: #808080;
+}
+
+.item-edit, .item-remove, .item-preview {
+	width: 50px;
+	text-align: right;
+	cursor: pointer;
+}
+
+.item-preview {
+  	font-size: 16px;
+}
+
+.item-edit:active, .item-remove:active, .item-preview:active {
+	color: #4D4D4D;
+}
