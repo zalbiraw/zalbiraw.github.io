@@ -1,0 +1,19 @@
+ul#recordingslist {
+	list-style-type: none;
+	padding: 0;
+}
+
+#recordingslist li a {
+	margin-left: 10px;
+}
+
+.record-start, .record-stop {
+	border-radius: 50%;
+    border-style: solid;
+    padding: 4px 8px;
+}
+
+.record-stop {
+	display: none;
+	color: red
+}

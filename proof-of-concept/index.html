@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="js/main.js"></script>
+  </head>
+
+  <body>
+    <button class="record-start" onclick="startRecording(this);"><i></i></button>
+    <button class="record-stop"  onclick="stopRecording(this);" ><i></i></button>
+
+    <ul id="recordingslist"></ul>
+
+    <script type="text/javascript">
+      var audio_context,
+          recorder,
+          r_start   = $('.record-start'),
+          r_stop    = $('.record-stop');
+
+      function startUserMedia(stream) {
+        var input = audio_context.createMediaStreamSource(stream);
+        recorder = new Recorder(input);
+      }
+
+      function toggleRecording(state) {
+        if (state)
+        {
+          r_start.css("display", "none");
+          r_stop.css("display", "inline");
+        } else {
+          r_start.css("display", "inline");
+          r_stop.css("display", "none");
+        }
+      }
+
+      function startRecording(button) {
+        recorder && recorder.record();
+        toggleRecording(true);
+      }
+
+      function stopRecording(button) {
+        recorder && recorder.stop();
+        toggleRecording(false);
+        createDownloadLink();
+        recorder.clear();
+      }
+
+      function createDownloadLink() {
+        recorder && recorder.exportWAV(function(blob) {
+          /*var url = URL.createObjectURL(blob);
+          var li = document.createElement('li');
+          var au = document.createElement('audio');
+          var hf = document.createElement('a');
+          
+          au.controls = true;
+          au.src = url;
+
+          hf.href = url;
+          hf.download = new Date().toISOString() + '.wav';
+          hf.innerHTML = hf.download;
+
+          li.appendChild(au);
+          li.appendChild(hf);
+          
+          recordingslist.appendChild(li);*/
+        });
+      }
+
+      window.onload = function init() {
+        try {
+          window.AudioContext = window.AudioContext || window.webkitAudioContext;
+          navigator.getUserMedia = navigator.getUserMedia || navigator.webkitGetUserMedia;
+          window.URL = window.URL || window.webkitURL;
+          
+          audio_context = new AudioContext;
+        } catch (e) {
+          alert('No web audio support in this browser!');
+        }
+        
+        navigator.getUserMedia({audio: true}, startUserMedia, function(e) {
+          alert('No live audio input: ' + e);
+        });
+      };
+
+    </script>
+    <script src="js/recordmp3.js"></script>
+  </body>
+</html>
