@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="js/main.js"></script>
+  </head>
+
+  <body>
+    <button class="record-start" onclick="startRecording(this);"><i></i></button>
+    <button class="record-stop"  onclick="stopRecording(this);" ><i></i></button>
+
+    <ul id="recordingslist"></ul>
+
+    <script type="text/javascript">
+
+      var isFirefox   = typeof InstallTrigger !== 'undefined',
+          isOpera     = !!window.opera || navigator.userAgent.indexOf(' OPR/') >= 0,
+          isChrome    = !!window.chrome && !isOpera,
+          //isEdge     =
+
+          chrome      = navigator.userAgent.match(/Chrom(e|ium)\/([0-9]+)\./),
+          firefox     = navigator.userAgent.match(/Firefox\/([0-9]+)\./),
+          opera       = navigator.userAgent.match(/OPR\/([0-9]+)\./),
+          verChrome   = chrome  ? parseInt(chrome [2], 10) : false,
+          verFirefox  = firefox ? parseInt(firefox[1], 10) : false,
+          verOpera    = opera   ? parseInt(opera  [1], 10) : false,
+
+          js = document.createElement("script");
+          js.type = "text/javascript";
+
+      if (isChrome  && verChrome  >= 21    ||
+          isFirefox && verFirefox >= 17    || 
+          isOpera   && verOpera   >= 18    /*|| 
+          isEdge*/                            ) {
+
+          js.src = "js/record_html5.js";
+          document.body.appendChild(js); 
+
+      } else  {
+
+        alert("load flash scripts");
+
+      }
+
+    </script>
+  </body>
+</html>
