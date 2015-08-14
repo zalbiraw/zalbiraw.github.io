@@ -94,8 +94,8 @@
 				var au = document.createElement('audio');
 				var hf = document.createElement('a');
 				  
+        au.src = url;
 				au.controls = true;
-				au.src = url;
 				hf.href = url;
 				hf.download = 'audio_recording_' + new Date().getTime() + '.mp3';
 				hf.innerHTML = hf.download;
