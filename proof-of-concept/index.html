@@ -44,12 +44,7 @@
       function stopRecording(button) {
         recorder && recorder.stop();
         toggleRecording(false);
-        createDownloadLink();
         recorder.clear();
-      }
-
-      function createDownloadLink() {
-        recorder && recorder.exportWAV(function(blob));
       }
 
       window.onload = function init() {
