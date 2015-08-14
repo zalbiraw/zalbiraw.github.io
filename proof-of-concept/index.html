@@ -59,9 +59,7 @@
           alert('No web audio support in this browser!');
         }
         
-        navigator.getUserMedia({audio: true}, startUserMedia, function(e) {
-          alert('No live audio input: ' + e);
-        });
+        navigator.getUserMedia({audio: true}, startUserMedia);
       };
 
     </script>
