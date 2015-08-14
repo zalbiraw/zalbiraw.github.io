@@ -25,8 +25,7 @@
       worker.postMessage({
         command: 'record',
         buffer: [
-          e.inputBuffer.getChannelData(0),
-          //e.inputBuffer.getChannelData(1)
+          e.inputBuffer.getChannelData(0)
         ]
       });
     }
@@ -69,7 +68,6 @@
 	//Mp3 conversion
     worker.onmessage = function(e){
       var blob = e.data;
-	  //console.log("the blob " +  blob + " " + blob.size + " " + blob.type);
 	  
 	  var arrayBuffer;
 	  var fileReader = new FileReader();
@@ -81,7 +79,6 @@
         
         console.log(data);
 		console.log("Converting to Mp3");
-		//log.innerHTML += "\n" + "Converting to Mp3";
 
         encoderWorker.postMessage({ cmd: 'init', config:{
             mode : 3,
@@ -96,13 +93,6 @@
             if (e.data.cmd == 'data') {
 			
 				console.log("Done converting to Mp3");
-				//log.innerHTML += "\n" + "Done converting to Mp3";
-				
-				/*var audio = new Audio();
-				audio.src = 'data:audio/mp3;base64,'+encode64(e.data.buf);
-				audio.play();*/
-                
-				//console.log ("The Mp3 data " + e.data.buf);
 				
 				var mp3Blob = new Blob([new Uint8Array(e.data.buf)], {type: 'audio/mp3'});
 				uploadAudio(mp3Blob);
@@ -189,8 +179,6 @@
 				processData: false,
 				contentType: false
 			}).done(function(data) {
-				//console.log(data);
-				//log.innerHTML += "\n" + data;
 			});
 		};      
 		reader.readAsDataURL(mp3Data);
@@ -199,17 +187,6 @@
     source.connect(this.node);
     this.node.connect(this.context.destination);    //this should not be necessary
   };
-  
-  /*Recorder.forceDownload = function(blob, filename){
-	console.log("Force download");
-    var url = (window.URL || window.webkitURL).createObjectURL(blob);
-    var link = window.document.createElement('a');
-    link.href = url;
-    link.download = filename || 'output.wav';
-    var click = document.createEvent("Event");
-    click.initEvent("click", true, true);
-    link.dispatchEvent(click);
-  }*/
 
   window.Recorder = Recorder;
 
