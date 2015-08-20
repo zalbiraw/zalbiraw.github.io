@@ -39,7 +39,7 @@ function stopRecording(button) {
 
 window.onload = function init() {
   try {
-    audio_context = (window.AudioContext || window.webkitAudioContext)();
+    audio_context = new (window.AudioContext || window.webkitAudioContext)();
     navigator.getUserMedia = (  navigator.getUserMedia ||
                                 navigator.webkitGetUserMedia ||
                                 navigator.mozGetUserMedia ||
