@@ -51,6 +51,6 @@ window.onload = function init() {
     navigator.getUserMedia({audio: true},
     function(stream) {
       recorder = new Recorder(audio_context.createMediaStreamSource(stream));
-    };
+    };);
   }
 };
