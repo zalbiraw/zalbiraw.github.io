@@ -55,7 +55,8 @@ window.onload = function init() {
     alert('No web audio support in this browser!');
   }
   
+  AdapterJS.webRTCReady(function(isUsingPlugin) {
   navigator.getUserMedia({audio: true}, startUserMedia, function(e) {
     alert('No live audio input: ' + e);
-  });
+  });});
 };
