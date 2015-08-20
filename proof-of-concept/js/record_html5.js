@@ -12,7 +12,7 @@ document.body.appendChild(js);
 function startUserMedia(stream) {
   alert(stream);
   alert(audio_context);
-  var input = audio_context.createMediaStreamSource(stream);
+  var input = audio_context.createMediaElementSource(stream);
   alert(input);
   recorder = new Recorder(input);
 }
