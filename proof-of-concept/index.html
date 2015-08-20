@@ -28,22 +28,26 @@
           verFirefox  = firefox ? parseInt(firefox[1], 10) : false,
           verOpera    = opera   ? parseInt(opera  [1], 10) : false,
 
-          js = document.createElement("script");
-          js.type = "text/javascript";
+          js 		  = document.createElement("script"),
+          js_adapter  = document.createElement("script");
 
-      /*if (isChrome  && verChrome  >= 21    ||
-          isFirefox && verFirefox >= 17    || 
-          isOpera   && verOpera   >= 18    || 
-          isEdge                            ) {*/
 
-          js.src = "js/record_html5.js";
-          document.body.appendChild(js); 
+      js.type = "text/javascript";
+	  js_adapter.type = "text/javascript";
 
-      /*} else  {
 
-        alert("load flash scripts");
+      if (!(isChrome  && verChrome  >= 21    ||
+          	isFirefox && verFirefox >= 17    || 
+          	isOpera   && verOpera   >= 18    /*|| 
+          	isEdge*/                            )) {
 
-      }*/
+        		alert("load flash scripts");
+	      		js_adapter.src = "js/record_html5.js";
+	      		document.body.appendChild(js_adapter); 
+      }
+
+      js.src = "js/record_html5.js";
+      document.body.appendChild(js); 
 
     </script>
   </body>
