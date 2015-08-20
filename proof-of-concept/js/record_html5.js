@@ -9,10 +9,6 @@ js.type = "text/javascript";
 js.src = "js/recordmp3.js";
 document.body.appendChild(js);    
 
-function startUserMedia(stream) {
-  recorder = new Recorder(audio_context.createMediaStreamSource(stream));
-}
-
 function toggleRecording(state) {
   if (state)
   {
@@ -38,18 +34,28 @@ function stopRecording(button) {
 
 window.onload = function init() {
   try {
-    audio_context = new (window.AudioContext || window.webkitAudioContext)();
+    window.AudioContext = window.AudioContext || window.webkitAudioContext;
     navigator.getUserMedia = (  navigator.getUserMedia ||
                                 navigator.webkitGetUserMedia ||
                                 navigator.mozGetUserMedia ||
                                 navigator.msGetUserMedia);
     window.URL = window.URL || window.webkitURL;
     
+    audio_context = new AudioContext;
   } catch (e) {
     alert('No web audio support in this browser!');
   }
   
-  navigator.getUserMedia({audio: true}, startUserMedia, function(e) {
+  if (navigator.getUserMedia)
+  {
+    navigator.getUserMedia({audio: true},
+    function(stream) {
+      recorder = new Recorder(audio_context.createMediaStreamSource(stream));
+    };
+
+  }
+
+  , startUserMedia, function(e) {
     alert('No live audio input: ' + e);
   });
 };
