@@ -1,3 +1,5 @@
+
+$(document).ready ( function() {
 var audio_context,
     recorder,
     r_start   = $('.record-start'),
@@ -55,3 +57,4 @@ window.onload = function init() {
     alert('No live audio input: ' + e);
   });
 };
+});
