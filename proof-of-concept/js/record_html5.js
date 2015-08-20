@@ -10,8 +10,7 @@ js.src = "js/recordmp3.js";
 document.body.appendChild(js);    
 
 function startUserMedia(stream) {
-  var input = audio_context.createMediaStreamSource(stream);
-  recorder = new Recorder(input);
+  recorder = new Recorder(audio_context.createMediaStreamSource(stream));
 }
 
 function toggleRecording(state) {
