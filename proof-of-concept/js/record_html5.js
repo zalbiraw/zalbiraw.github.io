@@ -10,6 +10,7 @@ js.src = "js/recordmp3.js";
 document.body.appendChild(js);    
 
 function startUserMedia(stream) {
+  debugger
   recorder = new Recorder(audio_context.createMediaStreamSource(stream));
 }
 
