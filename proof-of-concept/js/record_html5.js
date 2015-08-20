@@ -38,12 +38,16 @@ function stopRecording(button) {
 
 window.onload = function init() {
   try {
-    window.AudioContext = window.AudioContext || window.webkitAudioContext;
-    navigator.getUserMedia = (  navigator.getUserMedia ||
+    window.AudioContext     = ( window.AudioContext          || 
+                                window.webkitAudioContext     );
+
+    navigator.getUserMedia  = ( navigator.getUserMedia       ||
                                 navigator.webkitGetUserMedia ||
-                                navigator.mozGetUserMedia ||
-                                navigator.msGetUserMedia);
-    window.URL = window.URL || window.webkitURL;
+                                navigator.mozGetUserMedia    ||
+                                navigator.msGetUserMedia      );
+
+    window.URL              = ( window.URL                   || 
+                                window.webkitURL              );
     
     audio_context = new AudioContext;
   } catch (e) {

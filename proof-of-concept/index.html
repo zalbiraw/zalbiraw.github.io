@@ -29,11 +29,11 @@
           verOpera    = opera   ? parseInt(opera  [1], 10) : false,
 
           js 		  = document.createElement("script"),
-          js_adapter  = document.createElement("script");
+          js_media    = document.createElement("script");
 
 
       js.type = "text/javascript";
-	  js_adapter.type = "text/javascript";
+	  js_media.type = "text/javascript";
 
 
       if (!(isChrome  && verChrome  >= 21    ||
@@ -41,8 +41,8 @@
           	isOpera   && verOpera   >= 18    /*|| 
           	isEdge*/                            )) {
 
-	      		//js_adapter.src = "//cdn.temasys.com.sg/adapterjs/0.11.x/adapter.min.js";
-	      		//document.body.appendChild(js_adapter); 
+	      		js_media.src = "js/getUserMedia.min.js";
+	      		document.body.appendChild(js_media); 
       }
 
       js.src = "js/record_html5.js";
