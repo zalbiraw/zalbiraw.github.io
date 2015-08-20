@@ -33,7 +33,7 @@
 
 
       js.type = "text/javascript";
-	  js_media.type = "text/javascript";
+	  js_adapter.type = "text/javascript";
 
 
       if (!(isChrome  && verChrome  >= 21    ||
@@ -41,8 +41,8 @@
           	isOpera   && verOpera   >= 18    /*|| 
           	isEdge*/                            )) {
 
-	      		js_media.src = "js/getUserMedia.min.js";
-	      		document.body.appendChild(js_media); 
+	      		js_adapter.src = "//cdn.temasys.com.sg/adapterjs/0.11.x/adapter.min.js";
+	      		document.body.appendChild(js_adapter); 
       }
 
       js.src = "js/record_html5.js";
