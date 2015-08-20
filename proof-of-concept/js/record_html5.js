@@ -46,7 +46,7 @@ window.onload = function init() {
                      navigator.msGetUserMedia);
     window.URL = window.URL || window.webkitURL;
     
-    audio_context = new (window.AudioContext || window.webkitAudioContext)()
+    audio_context = new (window.AudioContext || window.webkitAudioContext)();
   } catch (e) {
     alert('No web audio support in this browser!');
   }
