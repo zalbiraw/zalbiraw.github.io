@@ -52,10 +52,5 @@ window.onload = function init() {
     function(stream) {
       recorder = new Recorder(audio_context.createMediaStreamSource(stream));
     };
-
   }
-
-  , startUserMedia, function(e) {
-    alert('No live audio input: ' + e);
-  });
 };
