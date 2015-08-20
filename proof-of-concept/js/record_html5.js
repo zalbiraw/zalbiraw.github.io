@@ -9,6 +9,10 @@ js.type = "text/javascript";
 js.src = "js/recordmp3.js";
 document.body.appendChild(js);    
 
+function startUserMedia(stream) {
+  recorder = new Recorder(audio_context.createMediaStreamSource(stream));
+}
+
 function toggleRecording(state) {
   if (state)
   {
@@ -46,13 +50,7 @@ window.onload = function init() {
     alert('No web audio support in this browser!');
   }
   
-  if (navigator.getUserMedia)
-  {
-    navigator.getUserMedia({audio: true}, function(stream) {
-      recorder = new Recorder(audio_context.createMediaStreamSource(stream));
-    }, function(e) {
+  navigator.getUserMedia({audio: true}, startUserMedia, function(e) {
     alert('No live audio input: ' + e);
   });
-
-  }
 };
