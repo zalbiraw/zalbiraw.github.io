@@ -48,9 +48,11 @@ window.onload = function init() {
   
   if (navigator.getUserMedia)
   {
-    navigator.getUserMedia({audio: true},
-    function(stream) {
+    navigator.getUserMedia({audio: true}, function(stream) {
       recorder = new Recorder(audio_context.createMediaStreamSource(stream));
-    });
+    }, function(e) {
+    alert('No live audio input: ' + e);
+  });
+
   }
 };
