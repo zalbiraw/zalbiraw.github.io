@@ -10,7 +10,6 @@ js.src = "js/recordmp3.js";
 document.body.appendChild(js);    
 
 function startUserMedia(stream) {
-  debugger
   recorder = new Recorder(audio_context.createMediaStreamSource(stream));
 }
 
@@ -55,8 +54,7 @@ window.onload = function init() {
     alert('No web audio support in this browser!');
   }
   
-  AdapterJS.webRTCReady(function(isUsingPlugin) {
   navigator.getUserMedia({audio: true}, startUserMedia, function(e) {
     alert('No live audio input: ' + e);
-  });});
+  });
 };
