@@ -16,37 +16,21 @@
 
     <script type="text/javascript">
 
-      var isFirefox   = typeof InstallTrigger !== 'undefined',
-          isOpera     = !!window.opera || navigator.userAgent.indexOf(' OPR/') >= 0,
-          isChrome    = !!window.chrome && !isOpera,
-          //isEdge     =
+      if (!navigator.getUserMedia || !navigator.webkitGetUserMedia) {
+        console.log("load getUserMedia.js");
+        
+        var js_getUserMedia = document.createElement("script");
 
-          chrome      = navigator.userAgent.match(/Chrom(e|ium)\/([0-9]+)\./),
-          firefox     = navigator.userAgent.match(/Firefox\/([0-9]+)\./),
-          opera       = navigator.userAgent.match(/OPR\/([0-9]+)\./),
-          verChrome   = chrome  ? parseInt(chrome [2], 10) : false,
-          verFirefox  = firefox ? parseInt(firefox[1], 10) : false,
-          verOpera    = opera   ? parseInt(opera  [1], 10) : false,
+        js_getUserMedia.src = "//cdn.temasys.com.sg/adapterjs/0.11.x/adapter.min.js";
+        document.body.appendChild(js_getUserMedia);
 
-          js 		      = document.createElement("script"),
-          js_adapter  = document.createElement("script");
-
-
-      js.type = "text/javascript";
-	  js_adapter.type = "text/javascript";
-
-
-      if (!(isChrome  && verChrome  >= 21    ||
-          	isFirefox && verFirefox >= 17    || 
-          	isOpera   && verOpera   >= 18    /*|| 
-          	isEdge*/                            )) {
-
-	      		js_adapter.src = "//cdn.temasys.com.sg/adapterjs/0.11.x/adapter.min.js";
-	      		document.body.appendChild(js_adapter); 
       }
 
-      js.src = "js/record_html5.js";
-      document.body.appendChild(js); 
+      var js_record_html5   = document.createElement("script");
+
+      //js_record_html5.src   = "js/record_html5.min.js";
+      js_record_html5.src   = "js/record_html5.js";
+      document.body.appendChild(js_record_html5);
 
     </script>
   </body>
