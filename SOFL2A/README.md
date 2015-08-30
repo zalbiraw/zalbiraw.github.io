@@ -7,10 +7,10 @@
 - All HTML files stay in the root of the folder.
 
 ##HTML Structure
-- The head tag "<head>" contains all CSS and JS links
-- The <div id="sidebar-mask"></div> tag is the black box the covers the content when the sidebar is active.
-- The <div id="menubar-box-outer"> tag contains the menubar items.
-	- The <li id="sidebar-icon"> tag is the button for the sidebar.
+- The head tag "head" contains all CSS and JS links
+- The "div" tag with id="sidebar-mask" is the black box the covers the content when the sidebar is active.
+- The "div" tag with id="menubar-box-outer contains the menubar items.
+	- The "li" tag id="sidebar-icon" is the button for the sidebar.
 
 	<body>
 		<div id="sidebar-mask"></div>
