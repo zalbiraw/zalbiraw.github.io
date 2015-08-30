@@ -1,6 +1,8 @@
 $(document).ready ( function() {
 	var search_box = $('#search-box'),
 		search_input = $('#search-box input'),
+		menu_box = $('#menubar-box'),
+		filter_box_outer = $('#filter-box-outer'),
 		filter_toggle = 0,
 		sidebar_toggle = 0,
 		but_filter = $('#filter-icon'),
@@ -10,7 +12,8 @@ $(document).ready ( function() {
 		body = $('body'),
 		sliding_container = $('#sliding-container'),
 		breadcrumb = document.getElementById("breadcrumb"),
-		scroll_cache = 0;
+		scroll_cache = 0,
+		menu_scroll = 0;
 
 
 	search_input.focusin(function() {
@@ -48,6 +51,10 @@ $(document).ready ( function() {
 	});
 
 	$('#question-arrays .item-edit').click(function(){
+		slide_in(this)
+	});
+
+	$('#test-rooms .item-qlist').click(function(){
 		slide_in(this)
 	});
 

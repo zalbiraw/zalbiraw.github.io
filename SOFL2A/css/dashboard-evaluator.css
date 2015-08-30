@@ -1,3 +1,27 @@
+#sliding-container.slide {
+	-webkit-transform: translateX(-100%); 
+   	   -moz-transform: translateX(-100%);
+    	-ms-transform: translateX(-100%); 
+       	 -o-transform: translateX(-100%); 
+        	transform: translateX(-100%); 
+}
+
+#content-container {
+	width: 200%;
+}
+
+#test-rooms, #questions-array {
+	width: 50%;
+}
+
+#test-rooms {
+	float: left;
+}
+
+#questions-array {
+	float: right;
+}
+
 .item-title {
 	width: 450px;
 }
@@ -48,6 +72,6 @@
 	color: #4CAE4C;
 }
 
-.item-submissions, .item-graded, .item-grade-status {
+.item-submissions, .item-graded, .item-grade-status, .slide-back {
 	cursor: pointer;
 }

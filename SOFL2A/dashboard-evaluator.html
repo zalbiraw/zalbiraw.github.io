@@ -1,0 +1,251 @@
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="css/dashboard.css">
+		<link rel="stylesheet" type="text/css" href="css/dashboard-evaluator.css">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+		
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+		<script src="js/dashboard.js"></script>
+		<script src="js/dashboard-evaluator.js"></script>
+	</head>
+	<body>
+		<div id="sidebar-mask"></div>
+		<div id="menubar-box-outer">
+			<div id="menubar-box">
+				<ul id="menubar" class="container">
+					<li id="sidebar-icon"><i class="fa fa-bars"></i></li>
+					<li class="title">SOFL2A</li>
+					<li id="search-bar"> 
+						<div id="search-box"> 
+							<span id="search-icon"><i class="fa fa-search"></i></span>
+							<input type="text" placeholder="Search"/>
+							<span id="filter-icon"><i class="fa fa-filter"></i></span>
+						</div>
+					</li>
+					<li class="profile"><a href="#"><img class="profile-icon" src="artwork/pic-fill.jpg"></img></a></li>
+				</ul>
+			</div>
+		</div>
+		<div id="filter-box-outer">
+			<ul id="filter-box" class="collapsed">
+				<li>
+					<input id="chk_box_item1" type="checkbox">
+					<label for="chk_box_item1" class="filter-item">Item 1</label>
+				</li>
+
+				<li>
+					<input id="chk_box_item2" type="checkbox">
+					<label for="chk_box_item2" class="filter-item">Item 2</label>
+				</li>
+
+				<li>
+					<input id="chk_box_item3" type="checkbox">
+					<label for="chk_box_item3" class="filter-item">Item 3</label>
+				</li>
+
+				<li>
+					<input id="chk_box_item4" type="checkbox">
+					<label for="chk_box_item4" class="filter-item">Item 4</label>
+				</li>
+
+				<li>
+					<input id="chk_box_item5" type="checkbox">
+					<label for="chk_box_item5" class="filter-item">What filter is this?</label>
+				</li>
+
+				<li>
+					<input id="chk_box_item6" type="checkbox">
+					<label for="chk_box_item6" class="filter-item">Item 6</label>
+				</li>
+
+				<li>
+					<input id="chk_box_item7" type="checkbox">
+					<label for="chk_box_item7" class="filter-item">Item 7</label>
+				</li>
+
+				<li>
+					<input id="chk_box_item8" type="checkbox">
+					<label for="chk_box_item8" class="filter-item">Hello World</label>
+				</li>
+
+				<li>
+					<input id="chk_box_item9" type="checkbox">
+					<label for="chk_box_item9" class="filter-item">Item 9</label>
+				</li>
+
+				<li>
+					<input id="chk_box_item0" type="checkbox">
+					<label for="chk_box_item0" class="filter-item">I want to filter this search</label>
+				</li>
+			</ul>
+		</div>
+		<nav id="sidebar-box">
+			<ul id="sidebar">
+				<li class="sidebar-item active">
+					<a href="#">Question Arrays</a> 
+				</li>
+				<li class="sidebar-item">
+					<a href="#">Sidebar item 2</a> 
+				</li>
+				<li class="sidebar-item">
+					<a href="#">Sidebar item 3</a> 
+				</li>
+				<li class="sidebar-item">
+					<a href="#">Sidebar item 4</a> 
+				</li>
+			</ul>
+		</nav>
+		<div id="menubar-box-holder"></div>
+		<div id="sliding-container">
+			<div id="content-container">
+				<section id="test-rooms">
+					<div class="container">
+						<div class="section-header">
+							Test Rooms	
+						</div>
+						<ul class="section-content">
+							<li class="item">
+								<ul class="item-header">
+									<li class="item-title">Test Room #32564835547</li>
+									<li class="item-status">Active</li>
+									<li class="item-submissions" title="Submissions">60/100</li>
+									<li class="item-slist" title="Submission List"><i></i></li>
+									<li class="item-qlist" title="Question List"><i></i></li>
+									<li class="item-release" title="Release Grade"><i></i></li>
+								</ul>
+							</li>
+							<li class="item">
+								<ul class="item-header">
+									<li class="item-title">Test Room #34212354671</li>
+									<li class="item-status">Inactive</li>
+									<li class="item-submissions" title="Submissions">0/60</li>
+									<li class="item-slist" title="Submission List"><i></i></li>
+									<li class="item-qlist" title="Question List"><i></i></li>
+									<li class="item-release" title="Release Grade"><i></i></li>
+								</ul>
+							</li>
+							<li class="item">
+								<ul class="item-header">
+									<li class="item-title">Test Room #32047583950</li>
+									<li class="item-status">Inactive</li>
+									<li class="item-submissions" title="Submissions">0/300</li>
+									<li class="item-slist" title="Submission List"><i></i></li>
+									<li class="item-qlist" title="Question List"><i></i></li>
+									<li class="item-release" title="Release Grade"><i></i></li>
+								</ul>
+							</li>
+							<li class="item">
+								<ul class="item-header">
+									<li class="item-title">Test Room #23556479584</li>
+									<li class="item-status">Inactive</li>
+									<li class="item-submissions" title="Submissions">0/0</li>
+									<li class="item-slist" title="Submission List"><i></i></li>
+									<li class="item-qlist" title="Question List"><i></i></li>
+									<li class="item-release" title="Release Grade"><i></i></li>
+								</ul>
+							</li>
+						</ul>
+
+						<div class="section-header">
+							Test Rooms - Closed
+						</div>
+						<ul class="section-content">
+							<li class="item">
+								<ul class="item-header">
+									<li class="item-title">Test Room #52634623553</li>
+									<li class="item-status">Grading</li>
+									<li class="item-submissions" title="Submissions">99/100</li>
+									<li class="item-slist" title="Submission List"><i></i></li>
+									<li class="item-qlist" title="Question List"><i></i></li>
+									<li class="item-release" title="Release Grade"><i></i></li>
+								</ul>
+							</li>
+							<li class="item">
+								<ul class="item-header">
+									<li class="item-title">Test Room #86756435323</li>
+									<li class="item-status">Graded</li>
+									<li class="item-submissions" title="Submissions">89/120</li>
+									<li class="item-slist" title="Submission List"><i></i></li>
+									<li class="item-qlist" title="Question List"><i></i></li>
+									<li id="graded" class="item-release" title="Release Grade"><i></i></li>
+								</ul>
+							</li>
+						</ul>
+
+						<div class="section-header">
+							Test Rooms - Released
+						</div>
+						<ul id="released" class="section-content">
+							<li class="item">
+								<ul class="item-header">
+									<li class="item-title">Test Room #52634623553</li>
+									<li class="item-status">Released</li>
+									<li class="item-submissions" title="Submissions">20/20</li>
+									<li class="item-slist" title="Submission List"><i></i></li>
+									<li class="item-qlist" title="Question List"><i></i></li>
+									<li class="item-release" title="Release Grade"><i></i></li>
+								</ul>
+							</li>
+							<li class="item">
+								<ul class="item-header">
+									<li class="item-title">Test Room #86756435323</li>
+									<li class="item-status">Released</li>
+									<li class="item-submissions" title="Submissions">267/300</li>
+									<li class="item-slist" title="Submission List"><i></i></li>
+									<li class="item-qlist" title="Question List"><i></i></li>
+									<li class="item-release" title="Release Grade"><i></i></li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+				</section>
+				<section id="questions-array">
+					<div class="container">
+						<div class="section-header">
+							<span class="slide-back">
+								<span id="back"><i class="fa fa-arrow-circle-left"></i>Back</span>
+								<span id="separator">/</span>
+								Test Rooms
+							</span> 
+							<i class="fa fa-chevron-right"></i>
+							<span id="breadcrumb"></span>
+							<i class="fa fa-plus"></i>
+						</div>
+						<ul class="section-content">
+							<li class="item">
+								<ul class="item-header">
+									<li class="item-title">Question 1</li>
+									<li class="item-submissions" title="Submissions">89/100</li>
+									<li class="item-type">Oral</li>
+									<li class="item-value">2 points</li>
+									<li class="item-graded" title="Graded">0/89</li>
+									<li id="none" class="item-grade-status"><i></i></li>
+								</ul>
+							</li>
+							<li class="item">
+								<ul class="item-header">
+									<li class="item-title">Question 2</li>
+									<li class="item-submissions" title="Submissions">89/100</li>
+									<li class="item-type">True/False</li>
+									<li class="item-value">1 point</li>
+									<li class="item-graded" title="Graded">89/89</li>
+									<li id="complete" class="item-grade-status"><i></i></li>
+								</ul>
+							</li>
+							<li class="item">
+								<ul class="item-header">
+									<li class="item-title">Question 3</li>
+									<li class="item-submissions" title="Submissions">89/100</li>
+									<li class="item-type">Short Answer</li>
+									<li class="item-value">5 point</li>
+									<li class="item-graded" title="Graded">70/89</li>
+									<li id="partial" class="item-grade-status"><i></i></li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+				</section>
+			</div>
+		</div>
+	</body>
+</html>
